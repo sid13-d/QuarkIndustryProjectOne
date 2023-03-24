@@ -255,12 +255,16 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add Item</h3>
+                <h3 class="card-title">Update Item</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form>
                 <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Product Id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Product Id" disabled>
+                  </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Product Name</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Product Name">
@@ -293,7 +297,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Add Item</button>
+                  <button type="submit" class="btn btn-primary">Update Item</button>
                 </div>
               </form>
             </div>
@@ -304,60 +308,6 @@
         <!-- /.card -->
       </section>
 
-      <section class="col-lg-12 connectedSortable">
-        <!-- Custom tabs (Charts with tabs)-->
-
-
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Current Inventory</h3>
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>Item Id</th>
-                  <th>Item Name</th>
-                  <th>Unit Price</th>
-                  <th>Stock Qty</th>
-                  <th>Delete</th>
-                  <th>Edit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Sprokets</td>
-                  <td>120</td>
-                  <td>Sprokets</td>
-                  <td>
-                    <input class="btn btn-danger" type="button" value="Delete">
-                  </td>
-                  <td>
-                    <input class="btn btn-primary" type="button" value="Update">
-                  </td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Item Id</th>
-                  <th>Item Name</th>
-                  <th>Unit Price</th>
-                  <th>Stock Qty</th>
-                  <th>Delete</th>
-                  <th>Edit</th>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-          <!-- /.card-body -->
-        </div>
-
-
-
-        <!-- /.card -->
-      </section>
     </div>
   </div><!-- /.container-fluid -->
   </section>
