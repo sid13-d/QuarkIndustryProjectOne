@@ -313,7 +313,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" id="add_item_btn" class="btn btn-danger">Add Item</button>
+                  <input type="button" onclick="addItem()" value="Add Item" id="add_item_btn" class="btn btn-danger">
                   <button type="submit" id="gen_invoice_number" class="btn btn-primary">Generate Invoice</button>
                 </div>
               </form>
@@ -335,7 +335,7 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped">
+            <table id="show-table" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th>Invoide Number</th>
@@ -354,8 +354,8 @@
                   <th>Delete</th>
                 </tr>
               </thead>
-              <tbody class="table_body">
-                <tr>
+              <tbody>
+                <!-- <tr>
                   <td>Invoide Number</td>
                   <td>Item Name</td>
                   <td>Item Price</td>
@@ -374,7 +374,7 @@
                   <td>
                     <input class="btn btn-primary" type="button" value="Update">
                   </td>
-                </tr>
+                </tr> -->
               </tbody>
               <tfoot>
                 <tr>
@@ -418,24 +418,84 @@
   <!-- ./wrapper -->
 
   <script>
-    let invoice_number = document.getElementById('invoice_number');
-    let item_name = document.getElementById('item_name');
-    let item_price = document.getElementById('item_price');
-    let units = document.getElementById('units');
-    let hsn = document.getElementById('hsn');
-    let gst = document.getElementById('gst');
-    let amount = document.getElementById('amount');
-    let discount = document.getElementById('discount');
-    let final_amount = document.getElementById('final_amount');
-    let cgst = document.getElementById('cgst');
-    let sgst = document.getElementById('sgst');
-    let total = document.getElementById('total');
-    let table_body = document.querySelector('.table_id');
+    let invoice_number_field = document.getElementById('invoice_number');
+let item_name_field = document.getElementById('item_name');
+let item_price_field = document.getElementById('item_price');
+let units_field = document.getElementById('units');
+let hsn_field = document.getElementById('hsn');
+let gst_field = document.getElementById('gst');
+let amount_field = document.getElementById('amount');
+let discount_field = document.getElementById('discount');
+let final_amount_field = document.getElementById('final_amount');
+let cgst_field = document.getElementById('sgst_amount');
+let sgst_field = document.getElementById('sgst_amount');
+let total_field = document.getElementById('total');
+let table_body = document.getElementById('show-table');
 
-    function addItem() {
-      
-    }
+function addItem() {
+  console.log("row called");
+  if (!table_body) {
+    console.error("Table not found");
+    return;
+  } else {
+    console.log("table exists");
+  }
+  
+  //inserting row
+  let newRow = table_body.insertRow(-1);
 
+  //inserting the cells in the row
+  let invoice_number = newRow.insertCell(0);
+  let item_name = newRow.insertCell(1);
+  let item_price = newRow.insertCell(2);
+  let units = newRow.insertCell(3);
+  let hsn = newRow.insertCell(4);
+  let gst = newRow.insertCell(5);
+  let amount = newRow.insertCell(6);
+  let discount = newRow.insertCell(7);
+  let final_amount = newRow.insertCell(8);
+  let cgst = newRow.insertCell(9);
+  let sgst = newRow.insertCell(10);
+  let total = newRow.insertCell(11);
+
+  invoice_number.innerHTML = invoice_number_field.value;
+  item_name.innerHTML = item_name_field.value;
+  item_price.innerHTML = item_price_field.value;
+  units.innerHTML = units_field.value;
+  hsn.innerHTML = hsn_field.value;
+  gst.innerHTML = gst_field.value;
+  amount.innerHTML = amount_field.value;
+  discount.innerHTML = discount_field.value;
+  final_amount.innerHTML = final_amount_field.value;
+  cgst.innerHTML = cgst_field.value;
+  sgst.innerHTML = sgst_field.value;
+  total.innerHTML = total_field.value;
+  
+  // add delete button
+  let deleteBtn = document.createElement("input");
+  deleteBtn.type = "button";
+  deleteBtn.value = "Delete";
+  deleteBtn.classList.add("btn", "btn-danger");
+  deleteBtn.addEventListener("click", function() {
+    // define action to take when delete button is clicked
+    newRow.remove();
+  });
+  let deleteCell = newRow.insertCell(12);
+  deleteCell.appendChild(deleteBtn);
+
+  // add update button
+  let updateBtn = document.createElement("input");
+  updateBtn.type = "button";
+  updateBtn.value = "Update";
+  updateBtn.classList.add("btn", "btn-primary");
+  updateBtn.addEventListener("click", function() {
+    // define action to take when update button is clicked
+    // for example, display a form to update the row's data
+  });
+  let updateCell = newRow.insertCell(13);
+  updateCell.appendChild(updateBtn);
+  console.log("invoice number:", invoice_number.innerHTML, "let invoice number : ", invoice_number_field.value);
+}
   </script>
 
   <!-- jQuery -->
