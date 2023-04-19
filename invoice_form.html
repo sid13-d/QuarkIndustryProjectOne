@@ -247,52 +247,94 @@
       </div>
       <!-- /.content-header -->
 
-      <section class="col-lg-12 connectedSortable">
-        <!-- Custom tabs (Charts with tabs)-->
-
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Item Description</h3>
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Add Item</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Invoice Number</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Invoice Number">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Client Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Client Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Client Address</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Client Address">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Client GSTIN</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Client GSTIN">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Invoide Date</label>
+                    <input type="date" class="form-control" id="exampleInputPassword1"
+                      placeholder="Enter Date">
+                  </div>
+                  <div class="form-group">
+                    <label>Select Transportation Mode</label>
+                    <select class="custom-select">
+                      <option>option 1</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                      <option>option 4</option>
+                      <option>option 5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Select State</label>
+                    <select class="custom-select">
+                      <option>option 1</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                      <option>option 4</option>
+                      <option>option 5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">PO Number</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Enter PO Number">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Consignee Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Consignee Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Consignee Address</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Consignee Address">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Consignee GSTIN</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Consignee GSTIN">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Place Of Supply</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Place Of Supply">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Add Item</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
           </div>
-          <!-- /.card-header -->
-          <div class="card-body p-0">
-            <table class="table table-striped">
-              <tbody>
-                <tr>
-                  <th>Name</th>
-                  <td>Sprokets</td>
-                </tr>
-                <tr>
-                  <th>Description</th>
-                  <td>Metal Frame</td>
-                </tr>
-                <tr>
-                  <th>Unit Price</th>
-                  <td>120</td>
-                </tr>
-                <tr>
-                  <th>Stock Quantity</th>
-                  <td>200</td>
-                </tr>
-                <tr>
-                  <th>Inventory Value</th>
-                  <td>70</td>
-                </tr>
-                <tr>
-                  <th>Purchased From</th>
-                  <td>ABC Ltd.</td>
-                </tr>
-                <tr>
-                  <th>Reorder Level</th>
-                  <td>1</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- /.card-body -->
+          <!--/.col (left) -->
         </div>
-
-
+        <!-- /.card -->
+      </section>
         <!-- /.card -->
       </section>
     </div>

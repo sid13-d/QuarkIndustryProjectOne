@@ -247,50 +247,158 @@
       </div>
       <!-- /.content-header -->
 
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Add Item</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Invoice Number</label>
+                    <input type="text" class="form-control" id="invoice_number" placeholder="Enter Invoice Number">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Item Name</label>
+                    <input type="text" class="form-control" id="item_name" placeholder="Enter Item Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Item Price</label>
+                    <input type="number" class="form-control" id="item_price" placeholder="Enter Item Price">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Units</label>
+                    <input type="number" class="form-control" id="units"
+                      placeholder="Enter Units">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">HSN</label>
+                    <input type="number" class="form-control" id="hsn" placeholder="Enter HSN">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">GST</label>
+                    <input type="text" class="form-control" id="gst" placeholder="Enter GST">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Amount</label>
+                    <input type="number" class="form-control" id="amount" placeholder="Enter Amount">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Discount</label>
+                    <input type="number" class="form-control" id="discount" placeholder="Enter Discount">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Final Amount</label>
+                    <input type="number" class="form-control" id="final_amount" placeholder="Enter Final Amount">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">CGST Amount</label>
+                    <input type="number" class="form-control" id="cgst_amount" placeholder="Enter CGST Amount">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">SGST Amount</label>
+                    <input type="number" class="form-control" id="sgst_amount" placeholder="Enter SGST Amount">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Total</label>
+                    <input type="number" class="form-control" id="total" placeholder="Total">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" id="add_item_btn" class="btn btn-danger">Add Item</button>
+                  <button type="submit" id="gen_invoice_number" class="btn btn-primary">Generate Invoice</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!--/.col (left) -->
+        </div>
+        <!-- /.card -->
+      </section>
+
       <section class="col-lg-12 connectedSortable">
         <!-- Custom tabs (Charts with tabs)-->
 
+
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Item Description</h3>
+            <h3 class="card-title">Current Inventory</h3>
           </div>
           <!-- /.card-header -->
-          <div class="card-body p-0">
-            <table class="table table-striped">
-              <tbody>
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
                 <tr>
-                  <th>Name</th>
-                  <td>Sprokets</td>
+                  <th>Invoide Number</th>
+                  <th>Item Name</th>
+                  <th>Item Price</th>
+                  <th>Units</th>
+                  <th>HSN</th>
+                  <th>GST</th>
+                  <th>Amount</th>
+                  <th>Discount</th>
+                  <th>Final Amount</th>
+                  <th>CGST</th>
+                  <th>SGST</th>
+                  <th>Total</th>
+                  <th>Update</th>
+                  <th>Delete</th>
                 </tr>
+              </thead>
+              <tbody class="table_body">
                 <tr>
-                  <th>Description</th>
-                  <td>Metal Frame</td>
-                </tr>
-                <tr>
-                  <th>Unit Price</th>
-                  <td>120</td>
-                </tr>
-                <tr>
-                  <th>Stock Quantity</th>
-                  <td>200</td>
-                </tr>
-                <tr>
-                  <th>Inventory Value</th>
-                  <td>70</td>
-                </tr>
-                <tr>
-                  <th>Purchased From</th>
-                  <td>ABC Ltd.</td>
-                </tr>
-                <tr>
-                  <th>Reorder Level</th>
-                  <td>1</td>
+                  <td>Invoide Number</td>
+                  <td>Item Name</td>
+                  <td>Item Price</td>
+                  <td>Units</td>
+                  <td>HSN</td>
+                  <td>GST</td>
+                  <td>Amount</td>
+                  <td>Discount</td>
+                  <td>Final Amount</td>
+                  <td>CGST</td>
+                  <td>SGST</td>
+                  <td>Total</td>
+                  <td>
+                    <input class="btn btn-danger" type="button" value="Delete">
+                  </td>
+                  <td>
+                    <input class="btn btn-primary" type="button" value="Update">
+                  </td>
                 </tr>
               </tbody>
+              <tfoot>
+                <tr>
+                  <th>Invoide Number</th>
+                  <th>Item Name</th>
+                  <th>Item Price</th>
+                  <th>Units</th>
+                  <th>HSN</th>
+                  <th>GST</th>
+                  <th>Amount</th>
+                  <th>Discount</th>
+                  <th>Final Amount</th>
+                  <th>CGST</th>
+                  <th>SGST</th>
+                  <th>Total</th>
+                  <th>Update</th>
+                  <th>Delete</th>
+                </tr>
+              </tfoot>
             </table>
           </div>
           <!-- /.card-body -->
         </div>
+
 
 
         <!-- /.card -->
@@ -300,14 +408,6 @@
   </section>
   <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-  <!-- <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.1.0-rc
-    </div>
-  </footer> -->
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -316,6 +416,27 @@
   <!-- /.control-sidebar -->
   </div>
   <!-- ./wrapper -->
+
+  <script>
+    let invoice_number = document.getElementById('invoice_number');
+    let item_name = document.getElementById('item_name');
+    let item_price = document.getElementById('item_price');
+    let units = document.getElementById('units');
+    let hsn = document.getElementById('hsn');
+    let gst = document.getElementById('gst');
+    let amount = document.getElementById('amount');
+    let discount = document.getElementById('discount');
+    let final_amount = document.getElementById('final_amount');
+    let cgst = document.getElementById('cgst');
+    let sgst = document.getElementById('sgst');
+    let total = document.getElementById('total');
+    let table_body = document.querySelector('.table_id');
+
+    function addItem() {
+      
+    }
+
+  </script>
 
   <!-- jQuery -->
   <script src="plugins/jquery/jquery.min.js"></script>
@@ -355,23 +476,6 @@
   <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
   <!-- Page specific script -->
-  <script>
-    $(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": false, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
-  </script>
 </body>
 
 </html>
